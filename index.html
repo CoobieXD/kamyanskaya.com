@@ -20,35 +20,37 @@
   <!-- Hero Banner -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Сімейний фотограф у Кривому Розі</h1>
-      <p>Зберігаю щирі моменти вашої родини</p>
+      <h1>Сімейний<br>фотограф<br>у Кривому Розі</h1>
+      <p>Збережіть найкращі моменти вашої родини</p>
       <div class="hero-contact">
-        Запис: <strong>Telegram / Viber - 093 124 77 26</strong>
+        Запис: Telegram / Viber - <span class="phone-copy" onclick="copyPhone(this)" title="Натисніть, щоб скопіювати">093 124 77 26</span>
       </div>
+      <a href="https://www.instagram.com/katekamyanskaya/" target="_blank" class="cta-button cta-button--desktop">Записатися на фотосесію</a>
+      <a href="viber://chat?number=%2B380931247726" class="cta-button cta-button--mobile">Записатися на фотосесію</a>
     </div>
   </section>
 
   <!-- Pricing Section -->
   <section class="pricing">
     <div class="pricing-header">
-      <h2>Вартість фотосесії</h2>
+      <h2><span class="decorative">✦</span> Вартість фотосесії <span class="decorative">✦</span></h2>
     </div>
     
     <div class="pricing-cards">
       <!-- Package 1 -->
       <div class="pricing-card">
         <h3>1 година</h3>
-        <div class="price">3000 грн</div>
+        <div class="price">3000<span class="currency">грн</span></div>
         <ul>
           <li>80–100 фото з легкою обробкою</li>
           <li>Підійде для студійних зйомок та сімейних фотосесій на природі</li>
         </ul>
       </div>
 
-      <!-- Package 2 -->
-      <div class="pricing-card">
+      <!-- Package 2 - Popular -->
+      <div class="pricing-card pricing-card--popular">
         <h3>30 хвилин</h3>
-        <div class="price">2000 грн</div>
+        <div class="price">2000<span class="currency">грн</span></div>
         <ul>
           <li>40–50 фото з легкою обробкою</li>
           <li>Оптимальний варіант для коротких зйомок у студії або на прогулянці</li>
@@ -58,7 +60,7 @@
       <!-- Package 3 -->
       <div class="pricing-card">
         <h3>15 хвилин</h3>
-        <div class="price">1000 грн</div>
+        <div class="price">1000<span class="currency">грн</span></div>
         <ul>
           <li>20–30 фото з легкою обробкою</li>
           <li>Для тих, хто хоче кілька красивих кадрів без зайвих витрат часу</li>
@@ -68,14 +70,14 @@
     </div>
 
     <div class="pricing-note">
-      Готові фото вже через 3-5 днів
+      <span class="decorative">✦</span> Готові фото вже через 3-5 днів <span class="decorative">✦</span>
     </div>
   </section>
 
   <!-- Instagram Feed -->
   <section class="instagram">
     <h2>Мої роботи в Instagram</h2>
-    <h3>Живі емоції, справжні історії, теплі спогади</h3>
+    <h3>Живі знімки без постановки. Реальні клієнти, не моделі!</h3>
     <script src="https://elfsightcdn.com/platform.js" async></script>
     <div class="elfsight-app-0b459b0f-b99c-4765-b54d-399ad357e624" data-elfsight-app-lazy></div>
   </section>
@@ -88,7 +90,7 @@
         Сімейний фотограф у Кривому Розі
       </div>
       <div class="footer-contact">
-        Запис: <strong>Telegram / Viber - 093 124 77 26</strong>
+        Запис: <strong>Telegram / Viber - <span class="phone-copy" onclick="copyPhone(this)" title="Натисніть, щоб скопіювати">093 124 77 26</span></strong>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-copy">
@@ -96,6 +98,30 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Fixed CTA -->
+  <a href="viber://chat?number=%2B380931247726" class="mobile-cta">Записатися на фотосесію</a>
+
+  <!-- Copy notification -->
+  <div id="copy-notification" class="copy-notification">Номер скопійовано!</div>
+
+  <script>
+    function copyPhone(element) {
+      const phone = '0931247726';
+      navigator.clipboard.writeText(phone).then(() => {
+        // Show notification
+        const notification = document.getElementById('copy-notification');
+        notification.classList.add('show');
+        
+        // Hide after 2 seconds
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+      });
+    }
+  </script>
 
 </body>
 
