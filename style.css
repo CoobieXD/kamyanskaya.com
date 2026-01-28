@@ -538,6 +538,17 @@ body {
     display: block;
   }
 
+  .instagram {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .instagram h2,
+  .instagram h3 {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
   .footer {
     padding-bottom: calc(var(--spacing-lg) + 60px);
   }
