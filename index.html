@@ -138,6 +138,23 @@
   <section class="instagram">
     <h2>Мої роботи в Instagram</h2>
 
+    <div class="instagram-fallback" id="instagram-fallback">
+      <div class="instagram-grid">
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo1.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo2.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo3.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo4.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo5.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo6.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo7.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo8.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo9.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo10.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo11.jpg" alt="Фото" loading="lazy"></a>
+        <a href="https://www.instagram.com/katekamyanskaya/" target="_blank"><img src="photos/photo12.jpg" alt="Фото" loading="lazy"></a>
+      </div>
+    </div>
+
     <script src="https://elfsightcdn.com/platform.js" async></script>
     <div class="elfsight-app-0b459b0f-b99c-4765-b54d-399ad357e624" data-elfsight-app-lazy></div>
   </section>
@@ -183,6 +200,14 @@
         console.error('Failed to copy:', err);
       });
     }
+
+    // Show fallback grid only if Elfsight widget fails to load
+    setTimeout(function() {
+      var el = document.querySelector('.elfsight-app-0b459b0f-b99c-4765-b54d-399ad357e624');
+      if (!el || el.children.length === 0) {
+        document.getElementById('instagram-fallback').classList.add('visible');
+      }
+    }, 5000);
   </script>
 
 </body>

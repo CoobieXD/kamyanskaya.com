@@ -541,6 +541,39 @@ body {
   box-shadow: 0 6px 20px rgba(139, 90, 60, 0.4);
 }
 
+/* Instagram Fallback Grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.instagram-grid a {
+  display: block;
+  overflow: hidden;
+}
+
+.instagram-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition);
+}
+
+.instagram-grid img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.instagram-fallback {
+  display: none;
+}
+
+.instagram-fallback.visible {
+  display: block;
+}
+
 .eapps-instagram-feed-title-container {
   display: none;
 }
