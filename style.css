@@ -41,7 +41,7 @@ body {
   position: relative;
   min-height: 85vh;
   padding: var(--spacing-xl) var(--spacing-md);
-  background-image: url('banner.jpg');
+  background-image: url('banner2.jpg');
   background-size: cover;
   /* background-position: center; */
   background-position: 60% 50%;
@@ -55,7 +55,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(45, 37, 32, 0.75) 0%, rgba(107, 68, 35, 0.55) 100%);
+  background: rgba(61, 50, 41, 0.55);
 }
 
 .hero-content {
@@ -103,23 +103,33 @@ body {
   font-weight: 600;
 }
 
+.hero-contact a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.hero-contact a:hover {
+  opacity: 0.8;
+}
+
 .cta-button {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: var(--color-cta);
+  background: #6b7c5e;
   color: #fff;
   font-size: 1.125rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(160, 82, 45, 0.4);
+  box-shadow: 0 8px 24px rgba(107, 124, 94, 0.4);
   transition: var(--transition);
 }
 
 .cta-button:hover {
-  background: var(--color-cta-hover);
+  background: #5a6b4e;
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(160, 82, 45, 0.5);
+  box-shadow: 0 12px 32px rgba(107, 124, 94, 0.5);
 }
 
 .cta-button:active {
@@ -570,6 +580,31 @@ body {
 .footer-contact strong {
   color: #f9e5d0;
   font-weight: 600;
+}
+
+.footer-contact a {
+  color: #f5e4d7;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.footer-contact a:hover {
+  color: #f9e5d0;
+}
+
+.footer-social {
+  margin-top: var(--spacing-sm);
+}
+
+.footer-instagram {
+  color: #f5e4d7;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.footer-instagram:hover {
+  color: #f9e5d0;
+  transform: scale(1.1);
 }
 
 .footer-divider {
