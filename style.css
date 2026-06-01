@@ -161,16 +161,25 @@ body {
   margin-bottom: 0;
 }
 
-.pricing-header h2 .decorative {
+.pricing-header h2::before,
+.pricing-header h2::after,
+.wedding-header h2::before,
+.wedding-header h2::after {
+  content: "✦";
   color: var(--color-secondary);
   font-size: 0.7em;
   opacity: 0.7;
+  vertical-align: middle;
 }
 
-.pricing-header h2 .decorative {
-  color: var(--color-secondary);
-  font-size: 0.7em;
-  opacity: 0.7;
+.pricing-header h2::before,
+.wedding-header h2::before {
+  margin-right: 0.5em;
+}
+
+.pricing-header h2::after,
+.wedding-header h2::after {
+  margin-left: 0.5em;
 }
 
 .pricing-cards {
@@ -365,12 +374,6 @@ body {
   font-size: clamp(1.9rem, 4vw, 3.5rem);
   font-weight: 600;
   color: var(--color-primary);
-}
-
-.wedding-header h2 .decorative {
-  color: var(--color-secondary);
-  font-size: 0.7em;
-  opacity: 0.7;
 }
 
 .wedding-cards {
